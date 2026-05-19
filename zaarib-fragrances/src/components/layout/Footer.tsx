@@ -44,9 +44,9 @@ export default function Footer() {
             <ul className="space-y-3.5">
               {[
                 { name: "Custom Fragrance", href: "/custom-fragrance" },
-                { name: "Bulk Orders" },
-                { name: "Corporate Gifting" },
-                { name: "Free Consultation" }
+                { name: "Bulk Orders", href: "/services#bulk-orders" },
+                { name: "Corporate Gifting", href: "/services#corporate-gifting" },
+                { name: "Free Consultation", href: "/services#consultation" }
               ].map((s) => (
                 <li key={s.name}>
                   {s.href ? (

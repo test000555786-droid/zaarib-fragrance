@@ -18,7 +18,7 @@ export default function Hero({ products }: Props) {
   const [left, center, right] = products;
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ paddingTop: 92 }}>
+    <section className="relative min-h-[100svh] flex items-start lg:items-center overflow-hidden pt-[120px] pb-24 lg:pt-[92px] lg:pb-0">
       {/* Background radial */}
       <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 75% 65% at 65% 50%, rgba(201,168,76,0.055) 0%, transparent 72%)" }} />
       {/* Vertical deco lines */}
