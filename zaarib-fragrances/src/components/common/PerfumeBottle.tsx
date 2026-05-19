@@ -2,9 +2,10 @@ interface Props {
   colors: [string, string];
   height?: number;
   glow?: boolean;
+  name?: string;
 }
 
-export default function PerfumeBottle({ colors, height = 120, glow = false }: Props) {
+export default function PerfumeBottle({ colors, height = 120, glow = false, name }: Props) {
   const [c1, c2] = colors;
   const w = Math.round(height * 0.55);
 
