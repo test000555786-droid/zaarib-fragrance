@@ -10,10 +10,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { openCart, totalItems, isOpen } = useCart();
   const count = totalItems();
 
   useEffect(() => {
+    setMounted(true);
     const fn = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
@@ -75,7 +77,7 @@ export default function Navbar() {
               aria-label="Open cart"
             >
               <ShoppingBag size={16} />
-              {count > 0 && (
+              {mounted && count > 0 && (
                 <span className="absolute -top-1.5 -right-1.5 bg-gold text-ink text-[9px] font-bold font-body w-4 h-4 rounded-full flex items-center justify-center">
                   {count}
                 </span>
